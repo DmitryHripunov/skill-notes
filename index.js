@@ -34,23 +34,31 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(cookieParser());
 
-app.use('/', [
-  main,
-  login,
-  // loginByPassport,
-  logout,
-  signup,
-  dashboard,
-  notes,
-]);
+// app.use('/', [
+//   main,
+//   login,
+//   // loginByPassport,
+//   logout,
+//   signup,
+//   dashboard,
+//   notes,
+// ]);
 
-app.all('*', (req, res) => {
+app.use('/', (req, res) => {
   try {
-    res.status(404).send('<h1>404! Page not found</h1>');
+    res.status(404).send('<h1>Hello</h1>');
   } catch(error) {
     res.send(error)
   }
 });
+
+// app.all('*', (req, res) => {
+//   try {
+//     res.status(404).send('<h1>404! Page not found</h1>');
+//   } catch(error) {
+//     res.send(error)
+//   }
+// });
 
 const server = http.createServer(app);
 
