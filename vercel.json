@@ -7,7 +7,7 @@
         "config": { "includeFiles": ["public/**"] }
       },
       {
-        "src": "public/",
+        "src": "public/*.js",
         "use": "@vercel/static"
       }
     ],
