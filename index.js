@@ -46,7 +46,7 @@ app.use(cookieParser());
 
 app.use('/', (req, res) => {
   try {
-    res.send('views/index.njk');
+    res.status(200).render('views/index.njk');
   } catch(error) {
     res.send(error)
   }
