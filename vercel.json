@@ -14,7 +14,7 @@
     "routes": [
         {
           "src": "/(.*)",
-          "dest": "public/bundle.js"
+          "dest": "index.js"
         }
       ]
   }
