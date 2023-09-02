@@ -2,7 +2,11 @@
     "version": 2,
     "builds": [
       {
-        "src": "public/bundle.js",
+        "src": "public/*",
+        "config": { "includeFiles": ["public/**"] }
+      },
+      {
+        "src": "**/*.njk",
         "use": "@vercel/static"
       }
     ],
