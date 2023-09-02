@@ -10,7 +10,7 @@ import main from './backend/routers/main.js';
 import dashboard from './backend/routers/dashboard.js';
 import signup from './backend/routers/signup.js';
 import login from './backend/routers/login.js';
-// import loginByPassport from './backend/routers/loginByPassport.js';
+import loginByPassport from './backend/routers/loginByPassport.js';
 import logout from './backend/routers/logout.js';
 
 import notes from './backend/api/notes.js';
@@ -34,25 +34,23 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(cookieParser());
 
-// app.use('/', [
-//   main,
-//   login,
-//   // loginByPassport,
-//   logout,
-//   signup,
-//   dashboard,
-//   notes,
-// ]);
+app.use('/', [
+  main,
+  login,
+  loginByPassport,
+  logout,
+  signup,
+  dashboard,
+  notes,
+]);
 
-app.use('/', [login]);
-
-// app.all('*', (req, res) => {
-//   try {
-//     res.status(404).send('<h1>404! Page not found</h1>');
-//   } catch(error) {
-//     res.send(error)
-//   }
-// });
+app.all('*', (req, res) => {
+  try {
+    res.status(404).send('<h1>404! Page not found</h1>');
+  } catch(error) {
+    res.send(error)
+  }
+});
 
 const server = http.createServer(app);
 
