@@ -2,7 +2,8 @@
     "version": 2,
     "builds": [
       {
-        "src": "public/*",
+        "src": "public/bundle.js",
+        "use": "@vercel/node",
         "config": { "includeFiles": ["public/**"] }
       },
       {
@@ -13,7 +14,7 @@
     "routes": [
         {
           "src": "/(.*)",
-          "dest": "public/bundle.js"
+          "dest": "index.js"
         }
       ]
   }
