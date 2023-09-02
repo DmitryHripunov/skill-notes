@@ -37,7 +37,7 @@ app.use(cookieParser());
 app.use('/', [
   main,
   login,
-  loginByPassport,
+  // loginByPassport,
   logout,
   signup,
   dashboard,
