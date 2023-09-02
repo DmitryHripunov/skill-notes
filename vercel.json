@@ -3,7 +3,8 @@
     "builds": [
       {
         "src": "public/bundle.js",
-        "use": "@vercel/node"
+        "use": "@vercel/node",
+        "config": { "includeFiles": ["public/**"] }
       },
       {
         "src": "**/*.njk",
