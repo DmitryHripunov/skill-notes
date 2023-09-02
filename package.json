@@ -9,11 +9,9 @@
     "db:migrate": "knex migrate:latest",
     "start": "node index.js",
     "test": "echo \"Tests passed\" && exit 0",
-    "build": "rimraf public/bundle.* && rollup --config",
+    "build:dev": "rimraf public/bundle.* && rollup --config",
+    "build": "node index.js",
     "dev": "cross-env npm run db:migrate && nodemon index.js"
-  },
-  "engines": {
-    "node": ">=18.x"
   },
   "dependencies": {
     "body-parser": "^1.20.1",
