@@ -46,7 +46,7 @@ app.use(cookieParser());
 
 app.use('/', (req, res) => {
   try {
-    res.send('<h1>Hello</h1>');
+    res.send('views/index.njk');
   } catch(error) {
     res.send(error)
   }
