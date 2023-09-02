@@ -44,13 +44,7 @@ app.use(cookieParser());
 //   notes,
 // ]);
 
-app.use('/', (req, res) => {
-  try {
-    res.status(200).render('./views/index.njk');
-  } catch(error) {
-    res.send(error)
-  }
-});
+app.use('/', [login]);
 
 // app.all('*', (req, res) => {
 //   try {
