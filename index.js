@@ -46,7 +46,7 @@ app.use('/', [
 
 app.all('*', (req, res) => {
   try {
-    res.status(404).send('<h1>404! Error Page!!!</h1>');
+    res.status(404).send('<h1>404! Page not found </h1>');
   } catch(error) {
     res.send(error)
   }
