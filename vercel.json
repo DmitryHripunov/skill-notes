@@ -4,10 +4,10 @@
       {
         "src": "index.js",
         "use": "@vercel/node",
-        "config": { "includeFiles": ["public/*.js"] }
+        "config": { "includeFiles": ["views/**"] }
       },
       {
-        "src": "views/**",
+        "src": ["views/**", "public/*.js"],
         "use": "@vercel/static"
       }
     ],
