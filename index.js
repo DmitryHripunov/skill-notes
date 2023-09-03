@@ -58,5 +58,5 @@ const port = process.env.PORT || 3000;
 
 
 server.listen(port, () => {
-  console.log(`  Listening on https://skill-notes-git-main-dmirtyhripunov-gmailcom.vercel.app/:${port}`);
+  console.log(`  Listening on http://lvh.me:${port}`);
 });
