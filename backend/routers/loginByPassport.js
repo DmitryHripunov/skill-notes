@@ -70,9 +70,9 @@ loginByPassport.route('/auth/github/callback').get(passport.authenticate('github
     res.status(200).cookie('sessionId', sessionId, {
       httpOnly: true,
       expires: 0,
-    }).redirect('dashboard');
+    }).redirect('/');
   } catch (e) {
-    res.status(500).send(`<pre>${e}</pre>`)
+    res.redirect('/')
   }
 });
 
