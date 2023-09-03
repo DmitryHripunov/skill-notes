@@ -10,7 +10,7 @@ import main from './backend/routers/main.js';
 import dashboard from './backend/routers/dashboard.js';
 import signup from './backend/routers/signup.js';
 import login from './backend/routers/login.js';
-import loginByPassport from './backend/routers/loginByPassport.js';
+// import loginByPassport from './backend/routers/loginByPassport.js';
 import logout from './backend/routers/logout.js';
 
 import notes from './backend/api/notes.js';
@@ -37,7 +37,7 @@ app.use(cookieParser());
 app.use('/', [
   main,
   login,
-  loginByPassport,
+  // loginByPassport,
   logout,
   signup,
   dashboard,
