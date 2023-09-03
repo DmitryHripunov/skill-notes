@@ -66,11 +66,14 @@ loginByPassport.route('/auth/github/callback').get(passport.authenticate('github
   session: false
 }), async (req, res) => {
   const sessionId = await createSession(req.user.id);
-
-  res.status(200).cookie('sessionId', sessionId, {
-    httpOnly: true,
-    expires: 0,
-  }).redirect('/dashboard');
+  try {
+    res.status(200).cookie('sessionId', sessionId, {
+      httpOnly: true,
+      expires: 0,
+    }).redirect('/dashboard');
+  } catch (e) {
+    res.status(500).send(`<pre>${e}</pre>`)
+  }
 });
 
 export default loginByPassport;
