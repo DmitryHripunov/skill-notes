@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "rewrites": [{ "source": "http://lvh.me", "destination": "https://skill-notes-orcin.vercel.app/" }],
   "builds": [
     {
       "src": "index.js",
