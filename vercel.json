@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "public": true,
   "builds": [
     {
       "src": "index.js",
@@ -8,8 +7,8 @@
       "config": { "includeFiles": ["views/**"] }
     },
     {
-      "use": "@vercel/static",
-      "config": { "includeFiles": ["public/**"] }
+      "src": "*.njk",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
