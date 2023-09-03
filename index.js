@@ -44,13 +44,13 @@ app.use('/', [
   notes,
 ]);
 
-app.all('*', (req, res) => {
-  try {
-    res.status(404).send('<h1>404! Page not found!!</h1>');
-  } catch(error) {
-    res.send(error)
-  }
-});
+// app.all('*', (req, res) => {
+//   try {
+//     res.status(404).send('<h1>404! Page not found!!</h1>');
+//   } catch(error) {
+//     res.send(error)
+//   }
+// });
 
 const server = http.createServer(app);
 
