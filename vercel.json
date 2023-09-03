@@ -7,7 +7,7 @@
       "config": { "includeFiles": ["views/**"] }
     },
     {
-      "src": "*.html",
+      "src": "*.njk",
       "use": "@vercel/static"
     }
   ],
