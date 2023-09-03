@@ -14,7 +14,7 @@ const GitHubStrategy = passportGithub.Strategy;
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: `https://skill-notes-orcin.vercel.app:${process.env.PORT}/auth/github/callback`,
+  callbackURL: "/auth/github/callback",
 }, async (accessToken, refreshToken, profile, done) => {
   const user = await findUserByUserId(profile.id);
 
